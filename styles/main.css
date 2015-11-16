@@ -1,8 +1,25 @@
-body {
-  background-color: pink; }
-
-h1 {
+#appTitle {
+  font-family: Arial;
   text-align: center;
-  color: purple; }
+  font-size: 6.5em;
+  margin-top: 230px;
+  margin-bottom: 90px; }
+
+.col-md-12 {
+  text-align: center; }
+
+.btn-xl {
+  padding: 50px 50px;
+  font-size: 30px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 100%;
+  opacity: 0.85; }
+
+.vert {
+  margin-top: 35px; }
+
+.jumbotron {
+  background-color: transparent; }
 
 /*# sourceMappingURL=main.css.map */
