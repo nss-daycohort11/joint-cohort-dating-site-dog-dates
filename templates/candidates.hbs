@@ -1,4 +1,16 @@
-{{#each matches}}
-  <h3>{{ name }}</h3>
-  <section>{{ bio }}</section>
+<div class="row">
+{{#each user}}
+	<div class="col-md-2">
+	  <h3>{{ name }}</h3>
+	  <div><img src="{{imageURL}}"></div>
+	  <div>"A {{gender}} {{breed}} age {{age}}"</div>
 {{/each}}
+</div>  
+
+
+
+
+
+
+
+
