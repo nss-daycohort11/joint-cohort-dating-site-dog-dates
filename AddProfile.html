@@ -9,155 +9,188 @@
     <link rel="stylesheet" type="text/css" href="lib/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
   </head>
+
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">PlayDate</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Dog Pack</a></li>
+          <li><a href="MyPack.html">Dog Bones</a></li>
+          <li><a href="AddProfile.html">My Pawfile</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
   <body>
     <form action="form.html" method="POST">
       <fieldset>
-        <legend>Tell us about yourself</legend>
-
-        <label for="name" >Enter your name</label>
-          <input id = "dog_name" type="text" name="name" autofocus>
-          <br/>
-        <label for="image" >Paste a link to a pic</label>
-          <input id = "dog_pic" type="text" name="image" autofocus>
-          <br/>
+        <label>Tell us about yourself</label>
+        <br>
+        <br>
+        <label for="Name" >Enter your name:</label>
+        <br>
+          <input id = "dog_name" type="text" class="first-name" autofocus>
+          <br>
+          <br>
+          <label>Gender:</label>
+          <br>
           <input class = "sex" id = "sex_male" type="radio" name="sex" value="male" checked> Male
           <br>
           <input class = "sex" id = "sex_female" type="radio" name="sex" value="female"> Female
-
+          <br>
           <br/>
-        <label for="email-address">Enter your email address</label>
-          <input id = "email" type="email" name="email" placeholder="you@somewhere.com">
-      <br/>
-
-        <label for="breed">Enter your breed</label>
-          <input id = "breed" type="text" name="breed" placeholder="ex: Labrador">
+        <label for="email-address">Enter your email address:</label>
+        <br>
+          <input class = "email" type="email" name="email" placeholder="http://oasisanimalshelter.net/images/Labrador110904.jpg">
+        <br/>
+        <br>
+        <label for="img">Add a photo:</label>
+        <br>
+          <input class ="img" name="img" placeholder="you@somewhere.com">
+        <br>
+        <br>
+        <label for="breed">Enter your breed:</label>
+        <br>
+          <input class = "breed" type="text" name="breed" placeholder="ex: Labrador">
           <p> Need help finding your breed?<a href = "http://www.akc.org/dog-breeds/" target="_blank"> Click HERE!</a></p>
           <br/>
-        <label for="age">Enter your Age</label>
-          <input id = "age" name="age" type="text" placeholder = "In human years">
+        <label for="age">Enter your Age:</label>
+        <br>
+          <input class = "age" name="age" type="text" placeholder = "In human years">
       </fieldset>
-
+      <br>
       <fieldset>
-        <legend>Write a short bio describing yourself</legend>
-          <textarea id = "bio" rows="4" cols="50" name = "bio"></textarea>
+        <label>Write a short bio describing yourself</label>
+        <br>
+          <textarea class = "bio" rows="4" cols="50" name = "bio"></textarea>
       </fieldset>
-
+      <br>
       <fieldset>
-        <legend>Skill Set</legend>
-          <h4> Can you:</h4>
-            <label for="roll_over">Roll Over</label>
-              <input type="radio" name="roll_over" value="yes" checked> Yes
-              <input type="radio" name="roll_over" value="no"> No
-          <br>
-            <label for="play_dead">Play Dead</label>
-              <input type="radio" name="play_dead" value="yes" checked> Yes
-              <input type="radio" name="play_dead" value="no"> No
-          <br>
-            <label for="shake">Shake</label>
-              <input type="radio" name="shake" value="yes" checked> Yes
-              <input type="radio" name="shake" value="no"> No
-          <br>
-            <label for="fetch">Fetch</label>
-              <input type="radio" name="fetch" value="yes" checked> Yes
-              <input type="radio" name="fetch" value="no"> No
-          <br>
-            <label for="get_slippers">Get Slippers</label>
-              <input type="radio" name="get_slippers" value="yes" checked> Yes
-              <input type="radio" name="get_slippers" value="no"> No
-          <br>
-            <label for="speak">Speak</label>
-              <input type="radio" name="speak" value="yes" checked> Yes
-              <input type="radio" name="speak" value="no"> No
-          <br>
-            <label for="get_paper">Get the Paper</label>
-              <input type="radio" name="get_paper" value="yes" checked> Yes
-              <input type="radio" name="get_paper" value="no"> No
+        <label> Can you:</label>
+        <br>
+          <label for="roll_over">Roll Over</label>
+            <input type="radio" name="roll_over" value=true checked> Yes
+            <input type="radio" name="roll_over" value=false> No
+        <br>
+          <label for="play_dead">Play Dead</label>
+            <input type="radio" name="play_dead" value=true checked> Yes
+            <input type="radio" name="play_dead" value=false> No
+        <br>
+          <label for="shake">Shake</label>
+            <input type="radio" name="shake" value=true checked> Yes
+            <input type="radio" name="shake" value=false> No
+        <br>
+          <label for="fetch">Fetch</label>
+            <input type="radio" name="fetch" value=true checked> Yes
+            <input type="radio" name="fetch" value=false> No
+        <br>
+          <label for="get_slippers">Get Slippers</label>
+            <input type="radio" name="get_slippers" value=true checked> Yes
+            <input type="radio" name="get_slippers" value=false> No
+        <br>
+          <label for="speak">Speak</label>
+            <input type="radio" name="speak" value=true checked> Yes
+            <input type="radio" name="speak" value=false> No
+        <br>
+          <label for="get_paper">Get the Paper</label>
+            <input type="radio" name="get_paper" value=true checked> Yes
+            <input type="radio" name="get_paper" value=false> No
       </fieldset>
+      <br>
       <fieldset>
-        <legend>Mating Preferences</legend>
+        <label>Mating Preferences:</label>
+        <br>
           <label for="neuteredorspayed">Are you neutered/spayed?</label>
-            <input type="radio" name="neutered" value="yes" checked> Yes
-            <input type="radio" name="neutered" value="no"> No
+            <input type="radio" name="neutered" value=true checked> Yes
+            <input type="radio" name="neutered" value=false> No
           <br>
           <label for="puppies">Do you want puppies?</label>
-            <input type="radio" name="puppies" value="yes" checked> Yes
-            <input type="radio" name="puppies" value="no"> No
+            <input type="radio" name="puppies" value=true checked> Yes
+            <input type="radio" name="puppies" value=false> No
       </fieldset>
-
-
+      <br>
       <fieldset>
-        <legend>Fave Snack?</legend>
-          <label for="fave_snack">Choose One</label>
-            <input type="radio" name="fave_snack" value="rawhide"> RawHide
-            <input type="radio" name="fave_snack" value="biscuits"> Biscuits
-            <input type="radio" name="fave_snack" value="pigEars"> Pig Ears
-            <input type="radio" name="fave_snack" value="bacon"> Bacon
-            <input type="radio" name="fave_snack" value="softchews"> SoftChews
-            <input type="radio" name="fave_snack" value="steak"> Steak
-            <input type="radio" name="fave_snack" value="chicken"> Chicken
+        <label>Favorite Snack?</label>
+          <br>
+          <label for="fave_snack">Choose One:</label>
+            <input type="radio" name="fave_snack" value="Rawhide"> RawHide
+            <input type="radio" name="fave_snack" value="Biscuits"> Biscuits
+            <input type="radio" name="fave_snack" value="Pig-ears"> Pig Ears
+            <input type="radio" name="fave_snack" value="Bacon"> Bacon
+            <input type="radio" name="fave_snack" value="Softchews"> SoftChews
+            <input type="radio" name="fave_snack" value="Steak"> Steak
+            <input type="radio" name="fave_snack" value="Chicken"> Chicken
       </fieldset>
-
+      <br>
       <fieldset>
-        <legend>What do you do for fun?</legend>
-          <h4> Do you like to:</h4>
+        <label>What do you do for fun?</label>
           <br>
           <label for="chase_cats">Chase Cats</label>
-            <input type="radio" name="chase_cats" value="yes" checked> Yes
-            <input type="radio" name="chase_cats" value="no"> No
+            <input type="radio" name="chase_cats" value=true checked> Yes
+            <input type="radio" name="chase_cats" value=false> No
           <br>
           <label for="play_ball">Play Ball</label>
-            <input type="radio" name="play_ball" value="yes" checked> Yes
-            <input type="radio" name="play_ball" value="no"> No
+            <input type="radio" name="play_ball" value=true checked> Yes
+            <input type="radio" name="play_ball" value=false> No
           <br>
           <label for="chew_shoes">Chew Shoes</label>
-            <input type="radio" name="chew_shoes" value="yes" checked> Yes
-            <input type="radio" name="chew_shoes" value="no"> No
+            <input type="radio" name="chew_shoes" value=true checked> Yes
+            <input type="radio" name="chew_shoes" value=false> No
           <br>
           <label for="sniff_around">Sniff Around</label>
-            <input type="radio" name="sniff_around" value="yes" checked> Yes
-            <input type="radio" name="sniff_around" value="no"> No
+            <input type="radio" name="sniff_around" value=true checked> Yes
+            <input type="radio" name="sniff_around" value=false> No
           <br>
           <label for="dig_holes">Dig Holes</label>
-            <input type="radio" name="dig_holes" value="yes" checked> Yes
-            <input type="radio" name="dig_holes" value="no"> No
+            <input type="radio" name="dig_holes" value=true checked> Yes
+            <input type="radio" name="dig_holes" value=false> No
           <br>
           <label for="bark_at_nothing">Bark at Nothing</label>
-            <input type="radio" name="bark_at_nothing" value="yes" checked> Yes
-            <input type="radio" name="bark_at_nothing" value="no"> No
+            <input type="radio" name="bark_at_nothing" value=true checked> Yes
+            <input type="radio" name="bark_at_nothing" value=false> No
           <br>
           <label for="tug_of_war">Tug Of War</label>
-            <input type="radio" name="tug_of_war" value="yes" checked> Yes
-            <input type="radio" name="tug_of_war" value="no"> No
+            <input type="radio" name="tug_of_war" value=true checked> Yes
+            <input type="radio" name="tug_of_war" value=false> No
           <br>
           <label for="roll_in_filth">Roll In Filth</label>
-            <input type="radio" name="roll_in_filth" value="yes" checked> Yes
-            <input type="radio" name="roll_in_filth" value="no"> No
+            <input type="radio" name="roll_in_filth" value=true checked> Yes
+            <input type="radio" name="roll_in_filth" value=false> No
           <br>
           <label for="dig_through_trash">Dig Through Trash</label>
-            <input type="radio" name="dig_through_trash" value="yes" checked> Yes
-            <input type="radio" name="dig_through_trash" value="no"> No
+            <input type="radio" name="dig_through_trash" value=true checked> Yes
+            <input type="radio" name="dig_through_trash" value=false> No
           <br>
           <label for="chase_the_red_dot">Chase the Red Dot</label>
-            <input type="radio" name="chase_the_red_dot" value="yes" checked> Yes
-            <input type="radio" name="chase_the_red_dot" value="no"> No
+            <input type="radio" name="chase_the_red_dot" value=true checked> Yes
+            <input type="radio" name="chase_the_red_dot" value=false> No
           <br>
           <label for="caught_the_red_dot">Have you ever caught the red dot?</label>
-            <input type="radio" name="caught_the_red_dot" value="yes" checked> Yes
-            <input type="radio" name="caught_the_red_dot" value="no"> No
-
+            <input type="radio" name="caught_the_red_dot" value=true checked> Yes
+            <input type="radio" name="caught_the_red_dot" value=false> No
       </fieldset>
 
 
       <fieldset>
-        <legend>Fave Toy?</legend>
+        <label>Favorite Toy?</label>
           <label for="fave_toy">Choose One</label>
-            <input type="radio" class = "fave_toy" name="fave_toy" value="balls"> Balls
-            <input type="radio" class = "fave_toy" name="fave_toy" value="squeaky_toy"> Squeaky Toys
-            <input type="radio" class = "fave_toy" name="fave_toy" value="plushy_animal"> Plushy Animals
-            <input type="radio" class = "fave_toy" name="fave_toy" value="crinkle_toy"> Crinkle Toys
-            <input type="radio" class = "fave_toy" name="fave_toy" value="dead_things"> Dead Things
-            <input type="radio" class = "fave_toy" name="fave_toy" value="shoes"> Shoes
+            <input type="radio" class = "fave_toy" name="fave_toy" value="Balls"> Balls
+            <input type="radio" class = "fave_toy" name="fave_toy" value="Squeaky Toys"> Squeaky Toys
+            <input type="radio" class = "fave_toy" name="fave_toy" value="Plushy Animals"> Plushy Animals
+            <input type="radio" class = "fave_toy" name="fave_toy" value="Crinkle Toys"> Crinkle Toys
+            <input type="radio" class = "fave_toy" name="fave_toy" value="Dead Things"> Dead Things
+            <input type="radio" class = "fave_toy" name="fave_toy" value="Shoes"> Shoes
       </fieldset>
+      <button type="button" id="profileSubmit">Submit</button>
     </form>
     <script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
   </body>
