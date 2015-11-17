@@ -1,9 +1,8 @@
-{{#each dog}}
+{{#each id}}
   <div class="col-sm-3" key="{{name}}" >
     <div>
-      <img src='{{image-url}}' alt='' onError='$(this).replaceWith("<div><h2>{{name}}</h2></div>");'>
+      <img src='{{img}}' alt='' onError='$(this).replaceWith("<div><h2>{{name}}</h2></div>");'>
        <h3>Welcome to my Profile!<h3>
-       {{img}}
        <ul>
        <li> Name: {{name}}</li>
        <li> Breed: {{breed}}</li>
