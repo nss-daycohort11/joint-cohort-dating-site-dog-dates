@@ -17,56 +17,50 @@ require.config({
 });
 
 require(
-  ["dependencies", "firebase", "auth"], 
-  function(_$_, firebase, auth) {
+  ["dependencies", "firebase", "auth", "newUser"], 
+  function(_$_, firebase, auth, newUser) {
+    var ref = new Firebase("https://dog-dates.firebaseio.com/");
+    var authData = ref.getAuth();
 
-    $('.btn-facebook').on('click', function(){
-      var ref = new Firebase("https://dog-dates.firebaseio.com/");
-      var authData = ref.getAuth();
+    if (!ref.getAuth()) {
+      $('.btn-facebook').on('click', function(){
+        if (authData === null) {
+          ref.authWithOAuthPopup("facebook", function(error, authData) {
+            if (error) {
+              console.log("Login Failed!", error);
+            } else {
+              console.log("Authenticated successfully with payload:", authData);
+              auth.setUid(authData.uid);
+              window.location.pathname = '../PackPage.html';
+            }
+          });
+        } else {
+          auth.setUid(authData.uid);
+          window.location.pathname = '../PackPage.html';
+        }
+        console.log(authData);
+      });
 
-      if (authData === null) {
-        ref.authWithOAuthPopup("facebook", function(error, authData) {
-          if (error) {
-            console.log("Login Failed!", error);
-          } else {
-            console.log("Authenticated successfully with payload:", authData);
-            auth.setUid(authData.uid);
-          }
-        });
-      } else {
-        auth.setUid(authData.uid);
-      }
-      console.log(authData);
-    });
-
-    $('.btn-github').on('click', function(){
-      var ref = new Firebase("https://dog-dates.firebaseio.com/");
-      var authData = ref.getAuth();
-
-      if (authData === null) {
-        ref.authWithOAuthPopup("github", function(error, authData) {
-          if (error) {
-            console.log("Login Failed!", error);
-          } else {
-            console.log("Authenticated successfully with payload:", authData);
-            auth.setUid(authData.uid);
-           // require(["core_list"], function() {});
-          }
-        });
-      } else {
-        auth.setUid(authData.uid);
-        // require(["core_list"], function() {});
-      }
-      console.log(authData);
-    });
-    /*
-      You can choose to use the REST methods to interact with
-      Firebase, or you can use the Firebase API with event
-      listeners. It's completely up to each team.
-
-      If you choose the former, I created two boilerplate modules
-      named `potential-mates.js`, and `add-favorite.js`.
-     */
-    
+      $('.btn-github').on('click', function(){
+        if (authData === null) {
+          ref.authWithOAuthPopup("github", function(error, authData) {
+            if (error) {
+              console.log("Login Failed!", error);
+            } else {
+              console.log("Authenticated successfully with payload:", authData);
+              auth.setUid(authData.uid);
+              window.location.pathname = '../PackPage.html';
+            }
+          });
+        } else {
+          auth.setUid(authData.uid);
+          window.location.pathname = '../PackPage.html';
+        }
+        console.log(authData);
+      });
+    }
+    if (!!ref.getAuth().uid && window.location.pathname === '/') {
+      window.location.pathname = '../PackPage.html';
+    }
   }
 );
