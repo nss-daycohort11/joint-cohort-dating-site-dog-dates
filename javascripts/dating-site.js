@@ -17,8 +17,8 @@ require.config({
 });
 
 require(
-  ["dependencies", "firebase", "auth", "newUser"], 
-  function(_$_, firebase, auth, newUser) {
+  ["dependencies", "firebase", "auth", "newUser", "dog-Pack"], 
+  function(_$_, firebase, auth, newUser, dogPack) {
     var ref = new Firebase("https://dog-dates.firebaseio.com/");
     var authData = ref.getAuth();
 
