@@ -3,7 +3,6 @@ define(function(require) {
   var fb = require('firebase');
   var auth = require('auth');
   var ref = new Firebase("https://dog-dates.firebaseio.com/");
-  console.log(ref.getAuth().uid);
   $(document).on('click', '#profileSubmit', function(){
     
     var name = $('.first-name').val();
