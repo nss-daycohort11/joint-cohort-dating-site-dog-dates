@@ -5,7 +5,7 @@ define(["jquery", "q"],
 		getCandidates: function() {
 			$.ajax({url: "https://dog-dates.firebaseio.com/"
 			}).done(function(candidates) {
-				require(["hbs!../templates/cadidates"], function(candidateTemplate) {
+				require(["hbs!../templates/----"], function(candidateTemplate) {  // needs HBS
 				  $("").html(candidateTemplate(candidates));  //  NEED id/class name  
 				});
 			});
