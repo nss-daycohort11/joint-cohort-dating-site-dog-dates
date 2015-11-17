@@ -1,0 +1,12 @@
+{{#each dog}}
+  <div class="col-sm-3" key="{{name}}" >
+    <div>
+      <img src='{{image-url}}' alt='' onError='$(this).replaceWith("<div><h2>{{name}}</h2></div>");'>
+      <p>Hello My name is {{name}} and I am a {{breed}} who is ready to romp.  I like snacks, playing with my toys, and activities.  I am good at tricks.  Other interesting facts are: {{bio}}.</p>
+    </div>
+    <br>
+      <button type="button" id="viewProfileButton">
+        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+      </button>
+  </div>
+{{/each}}

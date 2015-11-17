@@ -1,0 +1,21 @@
+{{#each dog}}
+  <div class="col-sm-3" key="{{name}}" >
+    <div>
+      <img src='{{image-url}}' alt='' onError='$(this).replaceWith("<div><h2>{{name}}</h2></div>");'>
+       <h3>Welcome to my Profile!<h3>
+       {{img}}
+       <ul>
+       <li> Name: {{name}}</li>
+       <li> Breed: {{breed}}</li>
+       <li> Age: {{age}}</li>
+       <li> Gender: {{gender}}</li>
+       <li> My favorite snack is {{fave_snack}}</li>
+       <li> My favorite toy is {{fave_toy}}</li>
+
+    </div>
+    <br>
+      <button type="button" id="addToFavorites">
+        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+      </button>
+  </div>
+{{/each}}
