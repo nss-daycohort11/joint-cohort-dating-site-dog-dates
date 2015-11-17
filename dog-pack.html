@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dog Pack</title>
+<link rel="stylesheet" type="text/css" href="./lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+<div class="col-md-12"><h1>The Dog Pack</h1></div>
+<div id="results" class="col-md-12"></div>  <!-- blank DIV for handlebars template -->
+	<!--  BOOTSTRAP WINDOW FOR POPUP OF CANDIDATE DETAILS -->
+<div class="modal fade" id="candidatePopup">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script data-main="javascripts/dating-site" src="./lib/bower_components/requirejs/require.js"></script>
+<script src="./lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
