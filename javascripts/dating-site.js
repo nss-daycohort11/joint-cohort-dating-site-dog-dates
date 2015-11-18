@@ -22,6 +22,9 @@ require(
     var ref = new Firebase("https://dog-dates.firebaseio.com/");
     var authData = ref.getAuth();
 
+    //load hb template w/login nonsense
+
+
     if (!ref.getAuth()) {
       $('.btn-facebook').on('click', function(){
         if (authData === null) {
@@ -37,6 +40,7 @@ require(
         } else {
           auth.setUid(authData.uid);
           window.location.pathname = '../PackPage.html';
+          // load hb template w/packpage
         }
         console.log(authData);
       });
@@ -50,17 +54,23 @@ require(
               console.log("Authenticated successfully with payload:", authData);
               auth.setUid(authData.uid);
               window.location.pathname = '../PackPage.html';
+            // load hb template w/packpage
             }
           });
         } else {
           auth.setUid(authData.uid);
           window.location.pathname = '../PackPage.html';
+                    // load hb template w/packpage
         }
         console.log(authData);
       });
     }
-    if (!!ref.getAuth().uid && window.location.pathname === '/') {
+    if (ref.getAuth().uid && window.location.pathname === '/') {
       window.location.pathname = '../PackPage.html';
+                // load hb template w/packpage
     }
-  }
-);
+    $("#sign-out").on('click'), function() {
+       console.log("sign-out clicked");
+       ref.unauth();
+   }
+  });

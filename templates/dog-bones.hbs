@@ -1,8 +1,14 @@
-	  <h3>You have {{ dogBonesNum }} dog ones!</h3>
-	  <h3>Click on a name to view their profile</div>
-	  {{#each dogBone}}
-		  <div>"Hi, I'm <span id="dogBone"><a href="#">{{name}}</a></span> and I want to romp with you!"</div>
-	  <!-- <div class='dogPack'><button type="button" id={{{@key}}} type="button" class="btn btn-info btn-sm delete" data-toggle="modal" data-target="#myModal">I would like to romp with {{name}}</button>   -->
-	  {{/each}}
-
+<div class="row">
+	{{#each this}}
+		<div class="col-md-2 col-sm-4">
+		{{#each this}}
+			  <h3>{{this.name}}</h3>
+			  <div><img src="{{this.img}}"></div>
+			  <div>{{this.gender}} {{this.breed}} age {{this.age}}</div>
+			  <div>{{this.bio}}</div>
+			  {{!-- <button id="{{@key}}" class="favorite" type="button">Dog Bone</button> --}}
+		{{/each}}
+		</div>  
+	{{/each}}
+</div>
 
