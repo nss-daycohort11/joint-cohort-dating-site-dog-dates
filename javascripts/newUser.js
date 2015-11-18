@@ -14,7 +14,7 @@ define(function(require) {
     var img = $('.img').val();
     var userID = ref.getAuth().uid;
     var fave_snack = $(".snack").val();
-    var fave_toy = $(".toy").val()
+    var fave_toy = $(".toy").val();
 
     var addUser = [{
       "age" : age,
@@ -32,7 +32,7 @@ define(function(require) {
 
     $(document).ready(function(){
       $.ajax({
-        url: "https://dog-dates.firebaseio.com/.json",
+        url: "https://dog-dates.firebaseio.com/" + ref.getAuth().uid + ".json",
         method: "POST",
         data: JSON.stringify(addUser)
       }).done(function(addUser) {

@@ -1,17 +1,13 @@
-
-  <div id="candidatePopup"><img src="{{imageURL}}"></div>
-  <div>"Hi, I am {{name}} and I am a {{gender}} {{breed}} looking for my forever playmate. I am {{neutered}} and want to have {{puppies}}</div>
-  <div>"Some interesting facts about myself {{bio}}"</div>
-  {{each ??}}
-  <div>My favorite snacks are {{snacks}}.  I love to {{activities}} and play with my {{toys}}.  I am also very good at {{tricks}}</div>
+<div class="row">
+  {{#each this}}
+    <div class="col-md-2 col-sm-4">
+    {{#each this}}
+        <h3>{{this.name}}</h3>
+        <div><img src="{{this.img}}"></div>
+        <div>{{this.gender}} {{this.breed}} age {{this.age}}</div>
+        <div>{{this.bio}}</div>
+        <button id="{{@key}}" class="favorite" type="button">Dog Bone</button>
+    {{/each}}
+    </div>  
   {{/each}}
-  <div>class='dogPack'><button type="button" id={{{@key}}} type="button" class="btn btn-info btn-sm delete" data-toggle="modal" data-target="#myModal">I would like to romp with {{name}}</button>  
-
-
-
-
-
-
-
-
-
+</div>

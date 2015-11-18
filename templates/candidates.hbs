@@ -1,20 +1,13 @@
 <div class="row">
 	{{#each this}}
-		<div class="col-md-2">
+		<div class="col-md-2 col-sm-4">
 		{{#each this}}
 			  <h3>{{this.name}}</h3>
 			  <div><img src="{{this.img}}"></div>
 			  <div>{{this.gender}} {{this.breed}} age {{this.age}}</div>
 			  <div>{{this.bio}}</div>
-			  <button id="{{@key}} class="favorite" type="button">Dog Bone</button>
+			  <button id="{{@key}}" class="favorite" type="button">Dog Bone</button>
 		{{/each}}
 		</div>  
 	{{/each}}
 </div>
-
-
-
-
-
-
-

@@ -1,5 +1,4 @@
 body {
-  background-image: url("../images/dogBackground.png");
   background-size: cover;
   background-color: #EBE2D1;
   background-repeat: no-repeat;
@@ -80,16 +79,8 @@ a {
   -o-transition: color 0.1s ease-in, background 0.1s ease-in;
   transition: color 0.1s ease-in, background 0.1s ease-in; }
 
-.rightside {
-  float: right;
-  display: inline;
-}
+img {
+  width: 90%;
+  max-height: 250px; }
 
-label {
-font-size: 1.2em;
-margin-top: 5px;
-padding : 2px;
-margin-right: 3px;
-
-}
 /*# sourceMappingURL=main.css.map */
