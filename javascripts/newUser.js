@@ -3,6 +3,10 @@ define(function(require) {
   var fb = require('firebase');
   var auth = require('auth');
   var ref = new Firebase("https://dog-dates.firebaseio.com/");
+
+  // When the submit button is clicked on the new profile page, the data input on the "pawfile"
+  // page is written as a new record to the database
+  
   $(document).on('click', '#profileSubmit', function(){
 
     var name = $('.first-name').val();

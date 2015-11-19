@@ -1,0 +1,40 @@
+    <div class = "leftside">
+      <form action="form.html" method="POST">
+        <label>Tell us about yourself</label>
+        <br>
+
+        <label for="Name" >Enter your name:</label>
+          <input id = "dog_name" type="text" class="first-name" autofocus>
+        <br>
+          <label>Gender:</label>
+          <input class = "sex" id = "sex_male" type="radio" name="sex" value="male" checked> Male
+          <input class = "sex" id = "sex_female" type="radio" name="sex" value="female"> Female
+        <br>
+        <label for="email-address">Enter your email address:</label>
+          <input class = "email" type="email" name="email" placeholder="you@somewhere.com">
+          <br>
+        <label for="img">Add a photo:</label>
+          <input class ="img" name="img" placeholder="http://oasisanimalshelter.net/images/Labrador110904.jpg">
+          <br>
+        <label for="breed">Enter your breed:</label>
+          <input class = "breed" type="text" name="breed" placeholder="ex: Labrador">
+          <p> Need help finding your breed?<a href = "http://www.akc.org/dog-breeds/" target="_blank"> Click HERE!</a></p>
+          <label for="age">Enter your Age:</label>
+          <input class = "age" name="age" type="text" placeholder = "In human years">
+        <br>
+          <label for="fave_toy">What's your favorite toy?:</label>
+          <input class = "toy" name="fave_toy" type="text" placeholder = "ex:ball">
+          <br>
+           <label for="fave_snack">What's your favorite snack?:</label>
+          <input class = "snack" name="fave_snack" type="text" placeholder = "ex:bacon">
+      </form>
+    </div>
+    <div class = "rightside">
+    <form>
+        <br>
+        <label>Write a short bio describing yourself</label>
+          <textarea class = "bio" rows="4" cols="50" name = "bio"></textarea>
+        <br>
+        <button type="button" id="profileSubmit">Submit</button>
+      </form>
+      </div>
